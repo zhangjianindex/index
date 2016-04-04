@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px; padding:0px;}
+#MaxDesk{
+	width:1366px;
+	height:700px;
+	border:1px solid #000;
+	margin:0 auto;
+	background:url(../img/w3.jpg);
+	background-repeat:no-repeat;
+	
+	}
+body .headnav{
+	width:100%;
+	height:90px;
+	z-index:10;
+	}
+.headnav .homepage{
+	font-size:50px;
+	line-height:90px;
+	left:30px;
+	color:#FFF;
+	font-family:"bodoni MT";
+	float:left;
+	top:0px;
+	position:absolute;
+	}
+.headnav .picture_click{
+	width:100px;
+	height:80px;
+	float:left;
+	position:absolute;
+	top:5px;
+	left:280px;
+	background:url(../img/anniu.png);
+	}
+.headnav .picture_click:hover{
+	background:url(../img/anniu2.png);
+	}
+.headnav ul{
+	float:right;
+	position:absolute;
+	right:60px;
+	top:5px;
+	width:350px;
+	height:70px;
+	}
+.headnav ul li{
+	list-style-type:none;
+	width:100px;
+	height:70px;
+	float:left;
+	border:1.5px solid #FFF;
+	border-radius:2px;
+	margin-left:10px;
+	text-align:center;
+	line-height:70px;
+	font-family:"微软雅黑";
+	font-size:18px;
+	color:#FFF;
+	background:url(../img/anniu.png);
+	}
+.headnav ul li:hover{
+	background:#CCC;}
+#notvisible{
+	width:100%;
+	height:90px;
+	position:absolute;
+	margin-top:0px;
+	background:#000;
+	display:none;
+	}
+a{
+	color:#FFF;
+	text-decoration:none;
+	}
+#bodybox{
+	width:100%;
+	height:610px;
+	position:relative;
+	
+	}
+#bodybox .version{
+	width:350px;
+	height:270px;
+	/*<!--border:1px solid #000;-->*/
+	margin-left:30px;
+	position:relative;
+	}
+#bodybox .declar{}
+#bodybox .menu{
+	width:900px;
+	height:150px;
+	border-radius:5px;
+	position:absolute;
+	bottom:10px;
+	left:30px;
+	}
+.version span{
+	color:#FFF;
+	font-family:"微软雅黑";
+	font-size:18px;
+	background:#7a89a2;
+	text-align:center;}
+#setversion{
+	width:256px;
+	height:200px;
+	background:url(../img/backg.png);
+
+	}
+.version .buju{
+	position:absolute;
+	bottom:0px;
+	}
+#bodybox .declar{
+	position:absolute;
+	width:600px;
+	height:200px;
+	right:0px;
+	bottom:400px;
+}
+.buju span:hover{
+	background:#666;}
+#bodybox .menu ul{
+	width:900px;
+	height:150px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	border:2px solid #FFF;
+	border-radius:3px;
+	}
+#bodybox .menu ul li{
+	list-style-type:none;
+	width:100px;
+	height:130px;
+	float:left;
+	margin-top:20px;
+	margin-left:50px;
+	text-align:center;
+	color:#FFF;
+	line-height:60px;
+	}
+#bodybox .menu ul li p{
+	font-family:"微软雅黑";
+	font-size:20px;
+	text-decoration:none;
+	color:#FFF;}
+#zhankai{
+	width:20px;
+	height:270px;
+	background:url(../img/bac.png);
+	}
+#neirong{
+	}
+#show{
+	display:block;
+	width:600px;
+	height:200px;
+	background:#039;
+	background:url(../img/dinner.jpg);
+	display:none;
+	}

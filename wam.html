@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WarmHome</title>
+<link href="css/namecode.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="MaxDesk"><!--/*在body内的最大的盒子*/-->
+<!--盒子里的头部导航条-->
+  <div id="notvisible"></div>
+  <div class="headnav">
+ 		
+    	<span class="homepage" title="小屋主页">HomePage</span>
+        <!--<div class="picture_click"><img style="margin-left:30px;margin-top:10px;" src="img/Mouse.png" alt="mouse" width="40"/>
+        <p style="color:#FFF;font-size:16px;font-family:'微软雅黑';margin-left:30px;">点击</p></div>-->
+        <ul id="clickli">
+        	<li><b>首页</b></li>
+            <li id="search"><a href="cicley.html"><b>搜索</b></a></li>
+            <li><b>电影</b></li>
+        </ul>
+  </div>
+ <!--主体盒子-->
+<div id="bodybox">
+	<!--日历-->
+	<div class="version">
+    	<span title="日历">&nbsp;&nbsp;&nbsp;&nbsp;Version&nbsp;&nbsp;&nbsp;&nbsp;</span><br/>
+        <div id="setversion"><img src="img/Oct.png" alt="10"/></div>
+		<div class="buju" style="width:300px;height:40px; background:none;">
+       	<span  style="width:100px;height:40px;display:block;border:2px solid #FFF;line-height:40px;float:left;margin-left:0px; margin-bottom:5px;background:none;border-radius:3px;" ><a href="#" id="button_up">上一页</a></span>
+        <span  style="width:100px;height:40px;display:block;border:2px solid #FFF;line-height:40px;float:left;margin-left:10px;margin-bottom:5px;background:none;border-radius:3px;" ><a href="#" id="button_down">下一页</a></span></div>
+    </div>
+     <!--功能-->
+    <div class="menu">
+    	<!--<div id="zhankai"></div>-->
+        <div id="neirong">
+    	<ul>
+        	<li><img src="img/desh.png" width="60px" height="60" alt="吃饭" /><a href="#"><p>用餐时间</p></a></li>
+            <li><img src="img/colock.png" width="60px" height="60" alt="时钟" /><a href="#"><p>计划安排</p></a></li>
+            <li><img src="img/note.png" width="60px" height="60" alt="笔记" /><a href="#"><p>笔记回看</p></a></li>
+            <li><img src="img/person.png" width="60px" height="60" alt="个人" /><a href="#"><p>个人空间</p></a></li>
+            <li><img src="img/tv.png" width="60px" height="60" alt="电视" /><a href="#"><p>娱乐时间</p></a></li>
+        </ul></div>
+    </div>
+    <!--声明-->
+    <div class="declar"><span id="show"><img src="img/dinner.jpg" width="600" height="200" alt="图片"/></span></div>
+   
+</div> 
+  
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+function clickfun(){
+	$("#clickli li").hover(function(){$("#notvisible").slideDown(150)}
+	,function(){$("#notvisible").hide(120)}
+	);
+	$("#neirong").hover(function(){$("#show").slideDown();},function(){$("#show").hide(50)});
+	var beijing=document.getElementById("MaxDesk");
+	}
+clickfun();
+function version(){
+	var versiondisplay=document.getElementById("setversion");
+	var button_up=document.getElementById("button_up");
+	var button_down=document.getElementById("button_down");
+	var mouth=1;
+	var dec='img/dce.png',oct='img/nov.png',oct='img/oct.png';
+	button_up.onclick=function(){
+		mouth--;
+		if(mouth==1){versiondisplay.childNodes[0].setAttribute("src","img/oct.png");}
+		else if(mouth==2){
+		versiondisplay.childNodes[0].setAttribute("src","img/dce.png");}
+		else{versiondisplay.childNodes[0].setAttribute("src","img/dce.png");}
+		mouth=0;
+		return false;}
+	button_down.onclick=function(){
+		mouth++;
+		if(mouth==1){versiondisplay.childNodes[0].setAttribute("src","img/oct.png");}
+		else if(mouth==0){
+		versiondisplay.childNodes[0].setAttribute("src","img/nov.png");
+		}
+		else{versiondisplay.childNodes[0].setAttribute("src","img/nov.png");
+		}
+		mouth=2;
+		return false;}
+	}
+version();
+function versionxian(){
+	$(".buju").hover(function(){$("#setversion").slideDown()},function(){$("#setversion").hide(200)});
+	
+	}
+function click_menu(){
+	var dianji=document.getElementById("neirong");
+	var dianjihou=dianji.getElementsByTagName("a");
+	var photo=document.getElementById("show");
+	var dianjitupian=function(xsrc){photo.childNodes[0].setAttribute("src",xsrc);return false;}
+	dianjihou[0].onclick=function(){photo.childNodes[0].setAttribute("src","img/dinner.jpg")}
+	dianjihou[1].onclick=function(){photo.childNodes[0].setAttribute("src","img/plan.jpg")}
+	dianjihou[2].onclick=function(){photo.childNodes[0].setAttribute("src","img/notes.jpg")}
+	dianjihou[3].onclick=function(){photo.childNodes[0].setAttribute("src","img/eys.jpg")}
+	dianjihou[4].onclick=function(){photo.childNodes[0].setAttribute("src","img/doit.jpg")}
+	
+
+}
+click_menu();
+</script>
+</body>
+</html>
