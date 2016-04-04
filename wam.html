@@ -65,10 +65,10 @@ function version(){
 	var button_up=document.getElementById("button_up");
 	var button_down=document.getElementById("button_down");
 	var mouth=1;
-	var dec='img/dce.png',oct='img/nov.png',oct='img/oct.png';
+	<!--var dec='img/dce.png',oct='img/nov.png',oct='img/oct.png';-->
 	button_up.onclick=function(){
 		mouth--;
-		if(mouth==1){versiondisplay.childNodes[0].setAttribute("src","img/oct.png");}
+		if(mouth==1){versiondisplay.childNodes[0].setAttribute("src","img/Oct.png");}
 		else if(mouth==2){
 		versiondisplay.childNodes[0].setAttribute("src","img/dce.png");}
 		else{versiondisplay.childNodes[0].setAttribute("src","img/dce.png");}
@@ -76,7 +76,7 @@ function version(){
 		return false;}
 	button_down.onclick=function(){
 		mouth++;
-		if(mouth==1){versiondisplay.childNodes[0].setAttribute("src","img/oct.png");}
+		if(mouth==1){versiondisplay.childNodes[0].setAttribute("src","img/Oct.png");}
 		else if(mouth==0){
 		versiondisplay.childNodes[0].setAttribute("src","img/nov.png");
 		}
